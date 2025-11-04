@@ -21,20 +21,6 @@ It performs the following key tasks:
 
 ---
 
-## 📂 Project Structure
-
-ecommerce_order_etl_pipeline/
-│
-├── orders.csv # Raw orders data
-├── customers.csv # Customer master data
-├── cleaned_orders.csv # Final clean dataset (generated)
-│
-├── app.py # Main ETL pipeline script
-└── README.md # Project documentation
-
-
----
-
 ## ⚙️ ETL Pipeline Components
 
 ### 1. 🧲 **Extract**
@@ -115,11 +101,4 @@ Example log output:
 | **Data Source** | CSV files (Orders & Customers) |
 | **Output Format** | Cleaned CSV |
 
----
 
-## 🚀 How to Run
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<your-username>/ecommerce_order_etl_pipeline.git
-   cd ecommerce_order_etl_pipeline
