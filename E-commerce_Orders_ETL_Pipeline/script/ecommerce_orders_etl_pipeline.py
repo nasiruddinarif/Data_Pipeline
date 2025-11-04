@@ -8,41 +8,6 @@ import os
 import time
 
 # ***************************
-#   CREATE TWO CSV FILES
-# ***************************
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
-# ***************************
-#   CREATE TWO CSV FILES
-# ***************************
-
-# Create orders.csv
-
-orders = {
-    'Order_ID' : [101, 102, 103, 104, 105],
-    'Customer_ID' : [1, 2, 3, 4, 5],
-    'Product' : ['Laptop', 'Headphones', 'Mouse', 'Keyboard', 'Monitor'],
-    'Quantity' : [1, 2, None, 1, 1],
-    'Price' : [4000, 300, 80, 150, 700],
-    'Order_Date' : ['2024-02-01', '2024-02-02', '2024-02-03', '2024-02-04', '2024-02-05']
-}
-
-df_orders = pd.DataFrame(orders)
-df_orders.to_csv(r'D:\data_engineer_project\ecommerce_order_etl_pipeline\orders.csv', index=False)
-
-# Create customers.csv
-customers = {
-    'Customer_ID' : [1, 2, 3, 4, 5],
-    'Customer_Name' : ['Ali', 'Siti', 'Ravi', 'Mei Ling', 'Arif'],
-    'Region' : ['KL', 'Penang', 'Johor', 'Sabah', 'Pahang']
-}
-df_customers = pd.DataFrame(customers)
-df_customers.to_csv(r'D:\data_engineer_project\ecommerce_order_etl_pipeline\customers.csv', index=False)
-
-# ***************************
 #   EXTRACT FUNCTIONS
 # ***************************
 
@@ -176,6 +141,3 @@ if __name__ == "__main__":
     load(Transformed_df, output_path)
 
     logging.info("🏁 ETL pipeline completed successfully!")
-
-
-print(Transformed_df)
